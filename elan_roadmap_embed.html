@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: transparent; padding: 16px; }
+
+  .legend { display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+  .leg { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #555; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  .phases { display: flex; gap: 0; align-items: flex-start; }
+  .phase-col { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 0; }
+
+  .phase-header { font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 8px; border: 1px solid; margin-bottom: 4px; text-align: center; }
+  .card { border-radius: 8px; border: 1px solid; padding: 8px 10px; }
+  .card-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .card-sub { font-size: 11px; }
+
+  .arrow { display: flex; align-items: center; justify-content: center; padding: 0 8px; padding-top: 40px; color: #999; font-size: 18px; flex-shrink: 0; }
+
+  .h-teal { background: #E1F5EE; border-color: #5DCAA5; color: #085041; }
+  .c-teal { background: #E1F5EE; border-color: #9FE1CB; }
+  .ct-teal { color: #085041; }
+  .cs-teal { color: #0F6E56; }
+
+  .h-blue { background: #E6F1FB; border-color: #85B7EB; color: #0C447C; }
+  .c-blue { background: #E6F1FB; border-color: #B5D4F4; }
+  .ct-blue { color: #0C447C; }
+  .cs-blue { color: #185FA5; }
+
+  .h-amber { background: #FAEEDA; border-color: #EF9F27; color: #633806; }
+  .c-amber { background: #FAEEDA; border-color: #FAC775; }
+  .ct-amber { color: #633806; }
+  .cs-amber { color: #854F0B; }
+
+  .h-gray { background: #F1EFE8; border-color: #B4B2A9; color: #444441; }
+  .c-gray { background: #F1EFE8; border-color: #D3D1C7; }
+  .ct-gray { color: #444441; }
+  .cs-gray { color: #5F5E5A; }
+</style>
+</head>
+<body>
+
+<div class="legend">
+  <div class="leg"><div class="dot" style="background:#1D9E75"></div> Huidige services</div>
+  <div class="leg"><div class="dot" style="background:#378ADD"></div> In ontwikkeling</div>
+  <div class="leg"><div class="dot" style="background:#EF9F27"></div> In uitwerking</div>
+  <div class="leg"><div class="dot" style="background:#888780"></div> Toekomst</div>
+</div>
+
+<div class="phases">
+
+  <!-- Kolom 1: Huidige services -->
+  <div class="phase-col">
+    <div class="phase-header h-teal">Huidige services</div>
+    <div class="card c-teal">
+      <div class="card-title ct-teal">Service A</div>
+      <div class="card-sub cs-teal">Actief</div>
+    </div>
+    <div class="card c-teal">
+      <div class="card-title ct-teal">Service B</div>
+      <div class="card-sub cs-teal">Actief</div>
+    </div>
+    <div class="card c-teal">
+      <div class="card-title ct-teal">Service C</div>
+      <div class="card-sub cs-teal">Actief</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <!-- Kolom 2: In ontwikkeling -->
+  <div class="phase-col">
+    <div class="phase-header h-blue">In ontwikkeling</div>
+    <div class="card c-blue">
+      <div class="card-title ct-blue">Service D</div>
+      <div class="card-sub cs-blue">Wordt uitgerold</div>
+    </div>
+    <div class="card c-blue">
+      <div class="card-title ct-blue">Service E</div>
+      <div class="card-sub cs-blue">Wordt uitgerold</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <!-- Kolom 3: In uitwerking -->
+  <div class="phase-col">
+    <div class="phase-header h-amber">In uitwerking</div>
+    <div class="card c-amber">
+      <div class="card-title ct-amber">Service F</div>
+      <div class="card-sub cs-amber">Concept fase</div>
+    </div>
+    <div class="card c-amber">
+      <div class="card-title ct-amber">Service G</div>
+      <div class="card-sub cs-amber">Concept fase</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <!-- Kolom 4: Toekomst -->
+  <div class="phase-col">
+    <div class="phase-header h-gray">Toekomst</div>
+    <div class="card c-gray">
+      <div class="card-title ct-gray">Innovatie A</div>
+      <div class="card-sub cs-gray">Idee fase</div>
+    </div>
+    <div class="card c-gray">
+      <div class="card-title ct-gray">Innovatie B</div>
+      <div class="card-sub cs-gray">Idee fase</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
